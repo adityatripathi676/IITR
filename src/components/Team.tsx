@@ -1,10 +1,10 @@
 import React from 'react';
 import { Github, Linkedin, Mail } from 'lucide-react';
-// import madhav from '../Images/madhav.jpeg';
-// import gaurang from '../Images/gaurang.jpeg';
-// import farhan from '../Images/farhan.jpeg';  
-// import aditya from '../Images/aditya.jpeg';
-// import shubham from '../Images/shubham.jpeg';
+import madhav from '../Images/madhav.jpeg';
+import gaurang from '../Images/gaurang.jpeg';
+import farhan from '../Images/farhan.JPG';  
+import aditya from '../Images/aditya.jpeg';
+import shubham from '../Images/shubham.jpeg';
 
 const Team = () => {
   const teamMembers = [
@@ -13,7 +13,7 @@ const Team = () => {
       role: "Team Lead | Frontend Developer",
       course: "B.Tech CSE",
       year: "2nd Year",
-      // image: aditya,
+      image: aditya,
       github: "#",
       linkedin: "#",
       email: "#"
@@ -23,7 +23,7 @@ const Team = () => {
       role: "UX/UI Designer",
       course: "B.Tech CSE",
       year: "2nd Year",
-      // image: shubham,
+      image: shubham,
       github: "#",
       linkedin: "#",
       email: "#"
@@ -33,7 +33,7 @@ const Team = () => {
       role: "Blockchain Developer",
       course: "BCA",
       year: "3rd Year",
-      // image: madhav,
+      image: madhav,
       github: "#",
       linkedin: "#",
       email: "#"
@@ -43,7 +43,7 @@ const Team = () => {
       role: "Research and Development",
       course: "B.Tech CSE",
       year: "2nd Year",
-      // image: gaurang,
+      image: gaurang,
       github: "#",
       linkedin: "#",
       email: "#"
@@ -53,7 +53,7 @@ const Team = () => {
       role: "Backend Developer",
       course: "B.Tech CSE",
       year: "2nd Year",
-      // image: farhan,
+      image: farhan,
       github: "#",
       linkedin: "#",
       email: "#"
