@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: 142 72% 29%;
+    --primary-light: 142 72% 35%;
+    --secondary: 198 90% 40%;
+    --accent: 32 98% 56%;
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply backdrop-blur-md bg-white/10 border border-white/20 shadow-xl;
+  }
+  
+  .nav-link {
+    @apply relative px-4 py-2 text-foreground/80 hover:text-foreground transition-colors;
+  }
+
+  .nav-link::after {
+    @apply content-[''] absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .mobile-nav-link {
+    @apply block w-full px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors;
+  }
+
+  .hero-gradient {
+    @apply bg-gradient-to-br from-primary/90 via-primary to-secondary;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .container-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+
+  .feature-card {
+    @apply p-6 rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300;
+  }
+
+  .marketplace-card {
+    @apply p-6 rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100;
+  }
+
+  .dashboard-card {
+    @apply p-6 rounded-xl bg-white shadow-lg;
+  }
+
+  .team-card {
+    @apply bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300;
+  }
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.slide-up {
+  animation: slideUp 0.6s ease-out;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
